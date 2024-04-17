@@ -21,3 +21,8 @@ pre-commit = "^3.7.0"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.taskipy.tasks]
+run = "streamlit run app.py"
+format = "black . && isort ."
+check = "pydocstyle"
