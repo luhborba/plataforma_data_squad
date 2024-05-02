@@ -1,5 +1,8 @@
+import base64
+
 import streamlit as st
 
+from paginas.cursos import cursos
 from paginas.home import pagina_inicial
 
 
@@ -10,6 +13,7 @@ def main():
         page_icon=logo,
         layout="wide",
     )
+
     st.image(logo)
     st.title("Plataforma - DataSquad")
     st.divider()
@@ -30,7 +34,7 @@ def main():
     if pagina == "Página Inicial":
         pagina_inicial()
     elif pagina == "Cursos":
-        st.write("Em desenvolvimento...")
+        cursos()
     elif pagina == "Roadmap de Estudos":
         st.write("Em desenvolvimento...")
     elif pagina == "Repositórios":
